@@ -6,4 +6,15 @@ void openURL(String url) => launchUrl(
     );
 
 // Tools & Tech
-final kTools = ["Flutter", "Dart", "Python", "Java", "C++", "MySql", "Flask"];
+final kTools = [
+  "Flutter",
+  "Dart",
+  "Python",
+  "Java",
+  "C++",
+  "MySql",
+  "Flask",
+  "Open-CV",
+  "Keras",
+  "Tensorflow"
+];

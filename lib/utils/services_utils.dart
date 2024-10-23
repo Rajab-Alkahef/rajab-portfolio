@@ -10,8 +10,8 @@ class ServicesUtils {
   ];
 
   static const List<String> servicesTitles = [
-    "Mobile App Development",
-    "Machine Learning",
+    "Mobile App Development\n\nClick for more details",
+    "Machine Learning\n\nClick for more details",
     // "Rapid Prototyping",
     // "Technical Blog Writing",
     // "Open Source - GitHub",
