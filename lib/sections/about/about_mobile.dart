@@ -19,6 +19,8 @@ class AboutMobile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     double height = MediaQuery.of(context).size.height;
+    double width = MediaQuery.of(context).size.width;
+
     final appProvider = Provider.of<AppProvider>(context);
 
     return Container(
@@ -85,13 +87,17 @@ class AboutMobile extends StatelessWidget {
             ),
           ),
           Space.y!,
-          Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: kTools
-                .map(
-                  (e) => ToolTechWidget(techName: e),
-                )
-                .toList(),
+          Align(
+            alignment: Alignment.center,
+            child: Wrap(
+              // mainAxisAlignment: MainAxisAlignment.center,
+              children: kTools
+                  .map(
+                    (e) => SizedBox(
+                        width: width / 4, child: ToolTechWidget(techName: e)),
+                  )
+                  .toList(),
+            ),
           ),
           Space.y!,
           Divider(

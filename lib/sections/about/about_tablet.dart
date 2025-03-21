@@ -1,16 +1,16 @@
+import 'dart:ui' as ui;
+
+import 'package:flutter/material.dart';
 import 'package:folio/configs/configs.dart';
+import 'package:folio/constants.dart';
 import 'package:folio/provider/app_provider.dart';
 import 'package:folio/utils/about_utils.dart';
 import 'package:folio/utils/utils.dart';
-import 'dart:ui' as ui;
-
+import 'package:folio/widget/about_me_data.dart';
 import 'package:folio/widget/custom_text_heading.dart';
+import 'package:folio/widget/tech_widget.dart';
 import 'package:provider/provider.dart';
 import 'package:universal_html/html.dart' as html;
-import 'package:flutter/material.dart';
-import 'package:folio/constants.dart';
-import 'package:folio/widget/about_me_data.dart';
-import 'package:folio/widget/tech_widget.dart';
 
 class AboutTab extends StatelessWidget {
   const AboutTab({Key? key}) : super(key: key);
@@ -81,17 +81,25 @@ class AboutTab extends StatelessWidget {
           ),
           Space.y!,
           Text(
+            textAlign: ui.TextAlign.center,
             'Technologies I have worked with:',
             style: AppText.l1!.copyWith(
               color: AppTheme.c!.primary,
             ),
           ),
-          Row(
-            children: kTools
-                .map(
-                  (e) => ToolTechWidget(techName: e),
-                )
-                .toList(),
+          const SizedBox(
+            height: 20,
+          ),
+          Align(
+            alignment: Alignment.center,
+            child: Wrap(
+              children: kTools
+                  .map(
+                    (e) => SizedBox(
+                        width: width / 4, child: ToolTechWidget(techName: e)),
+                  )
+                  .toList(),
+            ),
           ),
           Space.y!,
           Divider(
@@ -111,7 +119,7 @@ class AboutTab extends StatelessWidget {
                   ),
                   AboutMeData(
                     data: "Age",
-                    information: "23",
+                    information: "24",
                   ),
                 ],
               ),
