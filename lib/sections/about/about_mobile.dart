@@ -1,17 +1,20 @@
+import 'dart:ui' as ui;
+
 import 'package:flutter/foundation.dart';
+import 'package:flutter/material.dart';
 import 'package:folio/configs/configs.dart';
+import 'package:folio/constants.dart';
 import 'package:folio/provider/app_provider.dart';
 import 'package:folio/utils/about_utils.dart';
 import 'package:folio/utils/utils.dart';
-import 'dart:ui' as ui;
+import 'package:folio/widget/about_me_data.dart';
 import 'package:folio/widget/custom_text_heading.dart';
+import 'package:folio/widget/tech_widget.dart';
 import 'package:provider/provider.dart';
 import 'package:universal_html/html.dart' as html;
 
-import 'package:flutter/material.dart';
-import 'package:folio/constants.dart';
-import 'package:folio/widget/about_me_data.dart';
-import 'package:folio/widget/tech_widget.dart';
+import '../../utils/work_utils.dart';
+import '../../widget/community_button.dart';
 
 class AboutMobile extends StatelessWidget {
   const AboutMobile({Key? key}) : super(key: key);
@@ -138,21 +141,21 @@ class AboutMobile extends StatelessWidget {
                     ? html.window.open(StaticUtils.resume, "pdf")
                     : openURL(StaticUtils.resume);
               }),
-          Space.y!,
-          // Wrap(
-          //     alignment: WrapAlignment.center,
-          //     crossAxisAlignment: WrapCrossAlignment.center,
-          //     children: WorkUtils.logos
-          //         .asMap()
-          //         .entries
-          //         .map(
-          //           (e) => CommunityIconBtn(
-          //             icon: e.value,
-          //             link: WorkUtils.communityLinks[e.key],
-          //             height: WorkUtils.communityLogoHeight[e.key],
-          //           ),
-          //         )
-          //         .toList()),
+          Space.y1!,
+          Wrap(
+              alignment: WrapAlignment.center,
+              crossAxisAlignment: WrapCrossAlignment.center,
+              children: WorkUtils.logos
+                  .asMap()
+                  .entries
+                  .map(
+                    (e) => CommunityIconBtn(
+                      icon: e.value,
+                      link: WorkUtils.communityLinks[e.key],
+                      height: WorkUtils.communityLogoHeight[e.key],
+                    ),
+                  )
+                  .toList()),
         ],
       ),
     );

@@ -25,6 +25,26 @@ class ScrollProvider extends ChangeNotifier {
     );
   }
 
+  scrollTablet(int index) {
+    double offset = index == 1
+        ? 260
+        : index == 2
+            ? 290
+            : index == 3
+                ? 250
+                : index == 4
+                    ? 230
+                    : 310;
+
+    controller.animateTo(
+      AppDimensions.normalize(
+        offset * index.toDouble(),
+      ),
+      duration: const Duration(seconds: 1),
+      curve: Curves.easeInOut,
+    );
+  }
+
   scrollMobile(int index) {
     double offset = index == 1
         ? 200
@@ -35,8 +55,7 @@ class ScrollProvider extends ChangeNotifier {
                 : index == 4
                     ? 200
                     : 310;
-    print(offset);
-    print(index);
+
     controller.animateTo(
       AppDimensions.normalize(
         offset * index.toDouble(),

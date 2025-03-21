@@ -52,7 +52,9 @@ class _MobileDrawer extends StatelessWidget {
                       child: MaterialButton(
                         hoverColor: AppTheme.c!.primary!.withAlpha(70),
                         onPressed: () {
-                          scrollProvider.scrollMobile(e.key);
+                          Responsive.isTablet(context)
+                              ? scrollProvider.scrollTablet(e.key)
+                              : scrollProvider.scrollMobile(e.key);
                           Navigator.pop(context);
                         },
                         child: ListTile(

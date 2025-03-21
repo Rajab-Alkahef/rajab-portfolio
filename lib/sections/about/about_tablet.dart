@@ -12,6 +12,9 @@ import 'package:folio/widget/tech_widget.dart';
 import 'package:provider/provider.dart';
 import 'package:universal_html/html.dart' as html;
 
+import '../../utils/work_utils.dart';
+import '../../widget/community_button.dart';
+
 class AboutTab extends StatelessWidget {
   const AboutTab({Key? key}) : super(key: key);
 
@@ -168,33 +171,33 @@ class AboutTab extends StatelessWidget {
                   ),
                 ),
               ),
-              // Space.x!,
-              // Container(
-              //   width: width * 0.05,
-              //   decoration: BoxDecoration(
-              //     border: Border(
-              //       bottom: BorderSide(
-              //         color: Colors.grey[900]!,
-              //         width: 2.0,
-              //       ),
-              //     ),
-              //   ),
-              // ),
-              // SingleChildScrollView(
-              //   scrollDirection: Axis.horizontal,
-              //   child: Row(
-              //       children: WorkUtils.logos
-              //           .asMap()
-              //           .entries
-              //           .map(
-              //             (e) => CommunityIconBtn(
-              //               icon: e.value,
-              //               link: WorkUtils.communityLinks[e.key],
-              //               height: WorkUtils.communityLogoHeight[e.key],
-              //             ),
-              //           )
-              //           .toList()),
-              // ),
+              Space.x!,
+              Container(
+                width: width * 0.05,
+                decoration: BoxDecoration(
+                  border: Border(
+                    bottom: BorderSide(
+                      color: Colors.grey[900]!,
+                      width: 2.0,
+                    ),
+                  ),
+                ),
+              ),
+              SingleChildScrollView(
+                scrollDirection: Axis.horizontal,
+                child: Row(
+                    children: WorkUtils.logos
+                        .asMap()
+                        .entries
+                        .map(
+                          (e) => CommunityIconBtn(
+                            icon: e.value,
+                            link: WorkUtils.communityLinks[e.key],
+                            height: WorkUtils.communityLogoHeight[e.key],
+                          ),
+                        )
+                        .toList()),
+              ),
             ],
           )
         ],
