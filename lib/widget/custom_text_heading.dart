@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:folio/configs/app_typography.dart';
 import 'package:folio/provider/app_provider.dart';
+import 'package:folio/responsive/responsive.dart';
 import 'package:provider/provider.dart';
 
 class CustomSectionHeading extends StatelessWidget {
@@ -17,6 +18,7 @@ class CustomSectionHeading extends StatelessWidget {
     return Text(
       text,
       style: AppText.h1!.copyWith(
+        fontSize: Responsive.isMobile(context) ? 35 : null,
         color: appProvider.isDark ? Colors.white : Colors.black,
         fontFamily: 'Gilroy',
       ),
