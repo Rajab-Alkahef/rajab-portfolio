@@ -9,9 +9,9 @@ class Portfolio extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const Responsive(
-      mobile: PortfolioMobileTab(),
-      tablet: PortfolioMobileTab(),
-      desktop: PortfolioDesktop(),
+      mobile: WorkExperienceMobileTab(),
+      tablet: WorkExperienceMobileTab(),
+      desktop: WorkExperienceDesktop(),
     );
   }
 }

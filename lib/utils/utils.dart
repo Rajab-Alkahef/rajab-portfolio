@@ -6,6 +6,8 @@ import 'package:folio/sections/portfolio/portfolio.dart';
 import 'package:folio/sections/services/services.dart';
 import 'package:folio/widget/footer.dart';
 
+import '../sections/work_experience/work_experience.dart';
+
 class StaticUtils {
   static const String hi = 'assets/hi.gif';
 
@@ -19,6 +21,7 @@ class StaticUtils {
   static const String sastaticket = 'assets/work/st.png';
   static const String university = 'assets/work/cui.png';
   static const String fullterIsb = 'assets/work/flutterIsl.png';
+  static const String raqi = 'assets/work/raqi.jpg';
 
   // services
   static const String ml = 'assets/services/machine-learning.png';
@@ -60,6 +63,7 @@ class BodyUtils {
     HomePage(),
     About(),
     Services(),
+    WorkExperience(),
     Portfolio(),
     Contact(),
     Footer(),

@@ -8,14 +8,14 @@ import 'package:folio/widget/custom_text_heading.dart';
 import 'package:folio/widget/project_card.dart';
 import 'package:provider/provider.dart';
 
-class PortfolioDesktop extends StatefulWidget {
-  const PortfolioDesktop({Key? key}) : super(key: key);
+class WorkExperienceDesktop extends StatefulWidget {
+  const WorkExperienceDesktop({Key? key}) : super(key: key);
 
   @override
-  State<PortfolioDesktop> createState() => _PortfolioDesktopState();
+  State<WorkExperienceDesktop> createState() => _WorkExperienceDesktopState();
 }
 
-class _PortfolioDesktopState extends State<PortfolioDesktop> {
+class _WorkExperienceDesktopState extends State<WorkExperienceDesktop> {
   @override
   Widget build(BuildContext context) {
     final appProvider = Provider.of<AppProvider>(context);

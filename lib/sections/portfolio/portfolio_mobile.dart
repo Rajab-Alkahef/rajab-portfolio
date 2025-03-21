@@ -7,8 +7,8 @@ import 'package:folio/utils/utils.dart';
 import 'package:folio/widget/custom_text_heading.dart';
 import 'package:folio/widget/project_card.dart';
 
-class PortfolioMobileTab extends StatelessWidget {
-  const PortfolioMobileTab({Key? key}) : super(key: key);
+class WorkExperienceMobileTab extends StatelessWidget {
+  const WorkExperienceMobileTab({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
